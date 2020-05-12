@@ -29,7 +29,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 Once you are in the right place, with docker installed, you can run the startup shell script to build the application filestructure.
 ```
-docker run --rm -v ${PWD}:/${PWD##*/} -w /${PWD##*/} --network host ruby:alpine3.10 startup.sh
+docker run --rm -v ${PWD}:/${PWD##*/} -w /${PWD##*/} --network host ruby:alpine3.10 ./startup.sh
 ```
 The startup.sh builds a new application using postgres for the database, stimulus_reflex as a JS frontend, and does it all under a user called "railsuser" in the container.
 
