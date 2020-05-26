@@ -6,9 +6,11 @@ require('tailwindcss'),
 require('autoprefixer'),
 
 ## Build app/javascript/packs/stylesheets.css
-echo "@tailwind base;
-@tailwind components;
-@tailwind utilities;" > app/javascript/packs/stylesheets.css
+echo '@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";' > app/javascript/packs/stylesheets.css
 
 ## Add the following line in app/frontend/packs/application.js
 import './stylesheets.css'
